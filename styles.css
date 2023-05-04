@@ -1,0 +1,207 @@
+/* começando o projeto definindo as variáveis a serem utilizadas com base no figma fornecido */
+:root {
+    --branco-primario: #FFFFFF; 
+    --cinza-secundario: #C0C0C0; 
+    --botao-azul: #167BF7; 
+    --cor-de-fundo: #00030C;  
+    --fonte: 'Inter', sans-serif;
+} 
+
+/* importando a fonte */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* zerando por padrão a margem e o padding do css */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* estilizando o body */
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-primario);
+}
+
+/* definindo a imagem de background, diretamente no css */
+.principal {
+    background-image: url("asssets/Background.png"); /* esquema de url */
+    height: 100vh; /* definindo a altura */
+    background-size: contain; /* quero que a imagem contenha toda a tela */
+    background-repeat: no-repeat; /* não quero que a imagem se repita  */
+    display: grid; /* alterando o display */
+    grid-template-columns: 50% 50%; /* mudando o formato do display em grade */
+    font-family: var(--fonte); /* alterando a fonte de todo o projeto */
+    font-size: 1em; /* alterando o tamanho da fonte de todo o projeto */
+    font-weight: 400; /* alterando o peso da fonte de todo o projeto */
+    align-items: center; /* alinhando todos os elementos com a coluna inserida */
+    text-align: center; /* alinhando tudo o que está dentro do elemento de um bloco para o centro */
+}
+
+/* posicionando todo o conteúdo */
+.principal__caixa {
+    margin: 0 6em 0 6em;
+}
+
+/* estilizando o titulo */
+.principal__titulo {
+    font-size: 1.75px;
+    font-weight: 700;
+}
+
+/* alterando a posição da imagem */
+.principal__imagem {
+    margin: 1em 0 2em 0; /* sempre na ordem: topo, direita, baixo, esquerda (sentido horário) */
+}
+
+/* estilizando o meu botão */
+.principal__botao {
+    background-color: var(--botao-azul); /* definindo cor azul dele */ 
+    border-radius: 8px; /* raio da borda */
+    padding: 1em; /* paddin de 1em, portanto 16px */ 
+    color: var(--branco-primario); /* mudando a cor do texto */
+    text-decoration: none; /* retirando o underline do texto */ 
+    display: block; /* fazendo com que o botao ocupe mais espaço */
+    margin-bottom: 1em;
+}
+
+/* estilizando o botão 2 */
+.principal__botao__2 {
+    background-color: transparent;
+    border: 2px solid var(--branco-primario); /* definindo os valores da borda. grossura, tracejado e cor */
+    padding: 1em; /* definindo o padding */
+    color: var(--branco-primario); /* cor do texto */
+    text-decoration: none; /* sem underline */
+    display: block; /* fazendo com que o botao ocupe mais espaço */
+    border-radius: 8px; /* raio da borda */
+}
+
+/* estilizando o aviso */
+.aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+    margin-top: 0.625em;
+}
+
+/* estilizando a nova section */
+.secundario {
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    align-items: center; 
+    text-align: left;
+    margin: 0 7.5em;
+    margin-bottom: 9.4375em;
+}
+
+/* ajustando o tamanho da imagem */
+.secundario__imagem {
+    width: 80%;
+}
+
+/* estilizando o titulo */
+.secundario__titulo {
+    font-family: var(--fonte);
+    font-weight: 700;
+    font-size: 3em;
+    color: var(--branco-primario);
+}
+
+/* estilizando a descrição */
+.secundario__descricao {
+    font-family: var(--fonte);
+    font-weight: 400;
+    font-size: 1em;
+    color: var(--cinza-secundario);
+    margin-top: 0.5em;
+}
+
+/* estilizando o botao secundario */
+.secundario__botao {
+    background-color: var(--botao-azul); 
+    border-radius: 8px; 
+    padding: 1em; 
+    color: var(--branco-primario); 
+    text-decoration: none; 
+    display: inline-block; /* faz o botão ocupar apenas o espaço dele */
+    margin-top: 1em; 
+    font-family: var(--fonte);
+}
+
+/* mais uma section */
+.terciario {
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    align-items: center; 
+    text-align: left;
+    margin: 0 7.5em;
+    margin-bottom: 14.125em;
+    gap: 5em;
+}
+
+/* ajustando a posição do texto */
+.dispositivos {
+    text-align: center;
+}
+
+/* ajustando a margin */
+.dispositivos__titulo {
+    margin-bottom: 2.5em;
+    font-family: var(--fonte);
+    font-weight: 700;
+    font-size: 3em;
+}
+
+/* ajustando a posição do último elemento */
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none; /* retirando a bolinha padrão que aparece quando eu alinho elementos em listas */
+}
+
+/* mudando a fonte dos itens da lista */
+.dispositivos__lista__item {
+    font-family: var(--fonte);
+    font-weight: 700;
+    font-size: 2em;
+}
+
+/* adicionando um separador */
+.separador {
+    gap: 1em;
+}
+
+/* ajustando os elementos ao centro */
+.rodape {
+    text-align: center;
+    margin-top: 9em;
+}
+
+/* ajustando a posição dos links do footer */
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    list-style-type: none;
+    margin-top: 2.5em;
+    margin-bottom: 1.5em;
+}
+
+/* estilizando os links */
+.rodape__link {
+    text-decoration: none;
+    font-family: var(--fonte);
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--branco-primario);
+}
+
+/* estilizando o final do rodape */
+.rodape__texto {
+    font-family: var(--fonte);
+    font-weight: 400;
+    font-size: 0.875em;
+    margin: 1em 7.5em 6.18em 7.5em
+}
+
+.rodape__link:hover {
+    color: var(--botao-azul)
+}
